@@ -1,75 +1,50 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  min-height: 100vh; /* Ensure it takes full height */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-body {
-  font-family: Arial, Helvetica, Nimbus Sans L, sans-serif;
-  text-align: center;
+.cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows cards to wrap to next line if needed */
+  justify-content: center; /* Centers cards horizontally */
+  gap: 20px; /* Adds space between cards */
+  max-width: 1200px; /* Optional: limits maximum width */
 }
 
 .businessCard {
-  display: inline-block;
-  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
   border: 2px solid #eee;
   box-shadow: 0 2px 5px #ccc;
   width: 300px;
   padding: 20px;
   border-radius: 5px;
+  background-color: inherit;
 }
 
 .bc {
   color: #b1228c;
 }
 
-button {
-  padding: 8px 16px;
-  margin: 10px 0;
-  background-color: #b1228c;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+.logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 15px;
 }
 
-button:hover {
-  background-color: #8e1a6e;
+.contact-details {
+  margin-top: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.contact-details p {
+  margin: 5px 0;
+  font-size: 0.9em;
 }

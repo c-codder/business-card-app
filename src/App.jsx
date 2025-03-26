@@ -1,31 +1,41 @@
 import { useState } from 'react';
-import BusinessCard from './components/BusinessCard.jsx';  // Changed import name
+import BusinessCard from './components/BusinessCard.jsx';
 import './App.css';
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
 
-    const businessCards = [
+  const businessCards = [
     {
+      logo: '/src/logo-iso-768x428.webp',
       name: 'Stanislav',
       education: 'Bachelor of Science in Computer Science',
       jobTitle: 'Developer',
       company: 'Lemonsoft',
-      email: 'staswork@edu.vamk.fi'
+      email: 'staswork@edu.vamk.fi',
+      phone: '+3583256458',
+      address: 'Kauppakatu 58, Vaasa, Finland',
+
     },
     {
+      logo: '/src/logo-iso-768x428.webp',
       name: 'Yevheniii',
       education: 'Master of Science in Computer Science',
       jobTitle: 'Main Developer',
       company: 'Lemonsoft',
-      email: 'jekawork@edu.vamk.fi'
+      email: 'jekawork@edu.vamk.fi',
+      phone: '+3583256458',
+      address: 'Kauppakatu 58, Vaasa, Finland',
     },
     {
+      logo: '/src/logo-iso-768x428.webp',
       name: 'Artem',
       education: 'Bachelor of Science in Computer Science',
       jobTitle: 'Developer',
       company: 'Lemonsoft',
-      email: 'artemwork@edu.vamk.fi'
+      email: 'artemwork@edu.vamk.fi',
+      phone: '+3583256458',
+      address: 'Kauppakatu 58, Vaasa, Finland',
     }
   ];
 
@@ -44,10 +54,10 @@ function App() {
         placeholder="Search by name, company, or title..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        style={{ margin: '20px', padding: '10px', width: '300px' }}
+        style={{ margin: '20px', padding: '10px', width: '300px', borderRadius: '4px' }}
       />
 
-      <div>
+      <div className="cards-container">
         {filteredCards.map((card, index) => (
           <BusinessCard
             key={index}
@@ -56,6 +66,9 @@ function App() {
             jobTitle={card.jobTitle}
             company={card.company}
             email={card.email}
+            phone={card.phone}
+            address={card.address}
+            logo={card.logo}
           />
         ))}
       </div>
