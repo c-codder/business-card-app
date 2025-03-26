@@ -21,4 +21,4 @@ function BusinessCard({ name, education, jobTitle, company, email }) {
   );
 }
 
-export default BusinessCard;
+export default BusinessCard; 

@@ -40,3 +40,36 @@
 .read-the-docs {
   color: #888;
 }
+
+body {
+  font-family: Arial, Helvetica, Nimbus Sans L, sans-serif;
+  text-align: center;
+}
+
+.businessCard {
+  display: inline-block;
+  margin: 50px;
+  border: 2px solid #eee;
+  box-shadow: 0 2px 5px #ccc;
+  width: 300px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.bc {
+  color: #b1228c;
+}
+
+button {
+  padding: 8px 16px;
+  margin: 10px 0;
+  background-color: #b1228c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #8e1a6e;
+}
